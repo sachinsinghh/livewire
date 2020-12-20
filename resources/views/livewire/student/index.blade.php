@@ -1,5 +1,5 @@
 
-<div class="container-fluid">
+<div class="container">
 
     <div wire:ignore.self   class="modal fade" id="addStudentModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-</div>
+
 
 <div>
 
@@ -78,19 +78,21 @@
           </tr>
 @endforeach
         </tbody>
+
     </table>
+
 </div>
-
-
-
-
 
 <div style="float: right">
-    {{ $students->links() }}
-</div>
+    {{ $students->links('vendor.pagination.default') }}
 </div>
 
+
+
+
 </div>
+
+
 
 
 
