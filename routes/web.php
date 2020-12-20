@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Livewire\Students;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Livewire\Livewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
 });
+Route::get('/students',Students::class);
 Route::get('/sachin', function () {
-  
+
     DB::table('users')->insert(['password'=>23456,'email'=>'sachin@gmail.com','name'=>'sachin singh']);
     echo "successfully inserted";
 });

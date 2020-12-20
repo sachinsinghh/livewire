@@ -11,32 +11,49 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+
 
         @livewireStyles
 
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-dropdown')
+    <body >
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
+            {{-- @livewire('navigation-dropdown') --}}
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+
+
+{{ $slot }}
+
+
         </div>
 
-        @stack('modals')
+
 
         @livewireScripts
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <script>
+            window.livewire.on('studentAdded',()=> {
+                console.warn('modal1 hide started');
+
+
+$('#addStudentModal').modal('hide');
+
+
+            });
+        </script>
+
+
+
+
+
     </body>
 </html>
