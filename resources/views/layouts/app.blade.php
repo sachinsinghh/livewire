@@ -15,7 +15,7 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-
+        <script src="{{ mix('js/app.js') }}"></script>
 
 
         @livewireStyles

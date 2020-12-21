@@ -2,6 +2,7 @@
 <div class="container">
 
     <div wire:ignore.self   class="modal fade" id="addStudentModal" tabindex="-1" role="dialog">
+
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -38,20 +39,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-
-<div>
-
-    <div class="col-md-6 mb-4">
-
-        <!-- Search form -->
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-
-      </div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStudentModal">
-                Add Student
-              </button>
 
 
 
@@ -59,6 +46,17 @@
     </div>
 
 
+<div>
+    <div class="col-md-6 mb-4">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStudentModal">
+                Add Student
+              </button>
+
+
+
+    </div>
     <table class="table table-striped">
         <thead>
           <tr>
@@ -84,7 +82,7 @@
 </div>
 
 <div style="float: right">
-    {{ $students->links('vendor.pagination.default') }}
+    {{ $students->links() }}
 </div>
 
 

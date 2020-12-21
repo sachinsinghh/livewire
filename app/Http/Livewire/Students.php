@@ -10,6 +10,7 @@ use Livewire\WithPagination;
 class Students extends Component
 {
  use WithPagination;
+ protected $paginationTheme = 'bootstrap';
 
     public $first_name;
     public $last_name;
@@ -40,7 +41,6 @@ class Students extends Component
 
     public function render()
     {
-        $students = Student::paginate(10);
-        return view('livewire.student.index',['students'=>$students]);
+        return view('livewire.student.index',['students'=>Student::latest()->paginate(10)]);
     }
 }
