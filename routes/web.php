@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\DynamicInput;
 use App\Http\Livewire\Students;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,8 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 Route::get('/students',Students::class);
+Route::get('/dynamic-input',DynamicInput::class);
+Route::post('/dynamic-input',DynamicInput::class);
 Route::get('/sachin', function () {
 
     DB::table('users')->insert(['password'=>23456,'email'=>'sachin@gmail.com','name'=>'sachin singh']);
